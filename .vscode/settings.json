@@ -1,0 +1,8 @@
+{
+    "cloudcode.profile-cluster-map": {
+        "dockerfile": "miKCluster"
+    },
+    "cloudcode.profile-registry-map": {
+        "dockerfile": "egsmcontenedor.azurecr.io"
+    }
+}
