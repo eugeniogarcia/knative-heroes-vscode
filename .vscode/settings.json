@@ -1,8 +1,8 @@
 {
     "cloudcode.profile-cluster-map": {
-        "dockerfile": "miKCluster"
+        "dockerfile": "minikube"
     },
     "cloudcode.profile-registry-map": {
-        "dockerfile": "egsmcontenedor.azurecr.io"
+        "dockerfile": "www.gz.com:5000"
     }
 }

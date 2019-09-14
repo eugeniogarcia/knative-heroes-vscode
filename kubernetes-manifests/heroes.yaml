@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: heroes-v2
-  namespace: heroes-ns
   labels:
     app: heroes
     version: v2
@@ -22,23 +21,23 @@ spec:
         - name: milocalregistry
       containers:
       - name: heroes
-        image: hello-jib:0.0.2-SNAPSHOT
+        image: hello-jib
         imagePullPolicy: Always 
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8082
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
         livenessProbe:
           httpGet:
-              port: "8082"
+              port: 8082
               path: /heroes
           initialDelaySeconds: 15
           timeoutSeconds: 2
         readinessProbe:
           httpGet:
-              port: "8082"
+              port: 8082
               path: /heroes
           initialDelaySeconds: 15
           timeoutSeconds: 2
@@ -48,10 +47,11 @@ kind: Service
 metadata:
   name: heroes-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: heroes
     version: v2
   ports:
-  - port: 3000
+  - port: 8082
     targetPort: 8082
+    nodePort: 30150
