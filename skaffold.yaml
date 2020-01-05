@@ -4,7 +4,7 @@ build:
   tagPolicy:
     sha256: {}
   artifacts:
-    - image: hello-jib
+    - image: misheroes
       context: .
       jibMaven: {}
 deploy:
@@ -25,5 +25,5 @@ profiles:
         envTemplate:
           template: '{{.IMAGE_NAME}}:0.0.2-SNAPSHOT'
       artifacts:
-        - image: hello-jib
+        - image: misheroes
           context: .

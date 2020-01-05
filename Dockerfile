@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:8u212-jre-alpine
 RUN  apk update && apk upgrade && apk add netcat-openbsd && apk add curl
 RUN mkdir -p /app 
 COPY ./target/heroes-0.0.2-SNAPSHOT.jar /app/ 

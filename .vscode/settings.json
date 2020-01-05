@@ -1,8 +1,11 @@
 {
     "cloudcode.profile-cluster-map": {
-        "dockerfile": "minikube"
+        "local": "minikube",
+        "dockerfile": "miCluster"
     },
     "cloudcode.profile-registry-map": {
-        "dockerfile": "www.gz.com:5000"
-    }
+        "local": "www.gz.com:5000",
+        "dockerfile": "pruebacontenedor.azurecr.io"
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

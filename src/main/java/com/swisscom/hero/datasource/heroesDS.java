@@ -12,12 +12,12 @@ public class heroesDS {
 
 	public heroesDS(){
 		source=new ArrayList<Hero>();
-		source.add(new Hero.Builder().id(1).name("Pupa").createHero());
-		source.add(new Hero.Builder().id(2).name("Nani").createHero());
-		source.add(new Hero.Builder().id(3).name("Mausi").createHero());
-		source.add(new Hero.Builder().id(4).name("Nico").createHero());
-		source.add(new Hero.Builder().id(5).name("Verita").createHero());
-		source.add(new Hero.Builder().id(6).name("Eugenio").createHero());
+		source.add(new Hero.Builder().id(1).name("Pupa Garcia Zach").createHero());
+		source.add(new Hero.Builder().id(2).name("Nani Garcia Zach").createHero());
+		source.add(new Hero.Builder().id(3).name("Mausi Garcia Zach").createHero());
+		source.add(new Hero.Builder().id(4).name("Nico Garcia Zach").createHero());
+		source.add(new Hero.Builder().id(5).name("Verita Zach").createHero());
+		source.add(new Hero.Builder().id(6).name("Eugenio Garcia San Martin").createHero());
 		last=6;
 	}
 
